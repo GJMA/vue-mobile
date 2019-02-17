@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+// iconList
+$iconList:
+  'logo',
+  'address',
+  'gold',
+  'account',
+  'arrowRight',
+  'order',
+  'select',
+  'selected',
+  'close'
+;
+
+@each $icon in $iconList {
+  .gjma-icon-#{$icon} {
+    background-image: url(../icon1/icon_#{$icon}.png);
+  }
+}
+.gjma-icon {
+  display: inline-block;
+  width: .32rem;
+  height: .32rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@mixin icon-size($width) {
+  width: $width;
+  height: $width;
+}
+.gjma-icon1 {
+  @include icon-size(.08rem);
+}
+.gjma-icon2 {
+  @include icon-size(.16rem);
+}
+.gjma-icon3 {
+  @include icon-size(.24rem);
+}
+.gjma-icon4 {
+  @include icon-size(.32rem);
+}
+.gjma-icon5 {
+  @include icon-size(.4rem);
+}
+.gjma-icon6 {
+  @include icon-size(.48rem);
+}
+.gjma-icon7 {
+  @include icon-size(.56rem);
+}
+.gjma-icon8 {
+  @include icon-size(.64rem);
+}
+.gjma-icon9 {
+  @include icon-size(.72rem);
+}

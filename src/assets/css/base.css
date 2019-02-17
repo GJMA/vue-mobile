@@ -1,0 +1,136 @@
+/*
+ * 包含重置、功能、盒模型。伸缩盒和边距样式
+ * GJMA 2018-04-19
+ */
+
+ @charset "utf-8";
+ 
+ /* 重置 reset */
+ *{box-sizing: border-box;}
+ html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+ html:focus{outline: none;}
+ html,body {height: 100%;}
+ body{font-family:'Microsoft YaHei', -apple-system-font, "Helvetica Neue", sans-serif; color: #333;}
+ ::-webkit-scrollbar{display: none;}
+ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+ header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+ body,textarea,input,button,select,keygen,legend{outline:0;display: block;}
+ table{border-collapse:collapse;border-spacing:0;}
+ caption,th{text-align:left;font-weight:normal;}
+ html,body,fieldset,img,iframe,abbr{border:0;}
+ i,cite,em,var,address,dfn{font-style:normal;}
+ [hidefocus],summary{outline:0;}
+ ol,ul,li{list-style: none;}
+ h1,h2,h3,h4,h5,h6{font-size: 100%;line-height: 1.14em;}
+ sup,sub{font-size:83%;}
+ pre,code,kbd,samp{font-family:inherit;}
+ q:before,q:after{content:none;}
+ textarea{overflow:auto;resize:none;}
+ label,summary{cursor:default;}
+ a,button{cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,0);tap-highlight-color:rgba(0,0,0,0);}
+ button,textarea{border: none; outline: none;}
+ del,ins,u,s,a,a:hover{text-decoration:none;}
+ h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
+ del,ins,u,s,a,a:hover{text-decoration:none;}
+ a,a:hover{color:#333;}
+ html:focus,body:focus{outline: none;}
+ title{display: none;}
+ input{border: 0; background-color: transparent;}
+ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {color: #c8c8c8;}
+ input::-moz-placeholder, textarea::-moz-placeholder {color:#c8c8c8;}
+ input::-ms-input-placeholder, textarea::-ms-input-placeholder {color:#c8c8c8;}
+ /* 隐藏掉ie10input的关闭按钮 */
+ input::-ms-clear{display: none;}
+ img,input,select,label{vertical-align: middle;}
+ input,select,textarea{font-size: 100%;}
+ frame{display: block;}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/*基本样式*/
+html {
+	font-size: 100px;
+}
+html,
+body {
+	width: 100%;
+	height: 100%;
+	max-width: 750px;
+	margin: 0 auto;
+	font-size: .24rem;
+}
+
+body {
+	color: #333;
+}
+
+
+/*公用样式*/
+
+/*flex布局*/
+
+/*水平-从左到右*/
+.flex {
+	display: -webkit-flex;
+	display: flex;
+	
+	
+	-webkit-align-items: center;
+	align-items: center;
+	
+}
+
+/*水平-居中*/
+.flex-center {
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-justify-content: center;
+	justify-content: center;
+	
+	
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+/*水平-around*/
+.flex-around {
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-justify-content: space-around;
+	justify-content: space-around;
+	
+	-webkit-align-items: center;
+	align-items: center;
+	
+}
+
+/*水平-between*/
+.flex-between {
+	display: -webkit-flex!important;
+	display: flex;
+	
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	
+	-webkit-align-items: center;
+	align-items: center;
+	
+}
+
+
+.flex-v {
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+
+.flex-1 {
+    -webkit-flex: 1;
+    flex: 1;
+}
+

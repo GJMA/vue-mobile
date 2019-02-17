@@ -1,0 +1,113 @@
+@import './_var.scss';
+@import '../css/base.css';
+@import './icon.scss';
+
+// 基础
+.container {
+  position: relative;
+  height: 100%;
+  background: #f2f2f2;
+}
+.section {
+  background: #fff;
+  border-bottom: .01rem solid #d3d3d3;
+  padding: .16rem .24rem;
+  &-title {
+    line-height: .88rem;
+    margin-bottom: .16rem;
+    border-bottom: .01rem dotted #e3e3e3;
+    font-weight: bold;
+    font-size: .32rem;
+  }
+  &-content {
+    &-item {
+      margin-bottom: .32rem;
+    }
+  }
+}
+/** 功能型 */
+// 单元格
+.menu-cell {
+  height: .88rem;
+  background: #fff;
+  padding: 0 .32rem;
+  font-size: .28rem;
+  &-icon {
+    margin-right: .16rem;
+  }
+}
+
+// 定位
+.pos {
+  &-center {
+    position: absolute;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 70%;
+    background: #fff;
+    border-radius: .1rem;
+    padding: .34rem;
+  }
+}
+// 遮罩
+.mask {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .6);
+}
+
+// 背景色
+.bg-theme {
+  background: $color;
+}
+
+// 字体
+.ft {
+  &-white {
+    color: #fff;
+  }
+}
+
+// 加粗字体
+.ft-b {
+  font-size: .5rem;
+  font-weight: bold;
+}
+
+// 说明性文字
+.ft-desc {
+  color: #79797b;
+  font-size: .24rem;
+}
+
+/**
+  边距
+**/
+.mr-b-32 {
+  margin-bottom: .32rem;
+}
+.mr {
+  &-b {
+    &-8 {
+      margin-bottom: .08rem;
+    }
+    &-16 {
+      margin-bottom: .16rem;
+    }
+    &-24 {
+      margin-bottom: .24rem;
+    }
+    &-32 {
+      margin-bottom: .32rem;
+    }
+  }
+}

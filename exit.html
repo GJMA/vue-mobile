@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <style>
+    * {
+      margin: 0;
+    }
+
+    html,
+    body {
+      text-align: center;
+      height: 100%;
+    }
+
+    .btn {
+      position: absolute;
+      display: block;
+      width: 100px;
+      height: 100px;
+    }
+
+    .btn-lt {
+      left: 0;
+      top: 0;
+    }
+
+    .btn-lb {
+      left: 0;
+      bottom: 0;
+    }
+
+    .btn-rb {
+      right: 0;
+      bottom: 0;
+    }
+
+    .btn-rt {
+      right: 0;
+      top: 0;
+    }
+    .exit-btn {
+      margin: 10px auto;
+      display: inline-block;
+      padding: 10px 30px;
+      color: #fff;
+      border-radius: 5px;
+      background-color: #E3211D;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="exit-btn" id="exit-btn">退出登录</div>
+  <!-- <span class="btn btn-lt" id="btn-lt"></span>
+  <span class="btn btn-lb" id="btn-lb"></span>
+  <span class="btn btn-rb" id="btn-rb"></span>
+  <span class="btn btn-rt" id="btn-rt"></span> -->
+
+  <script type="text/javascript">
+    document.getElementById('exit-btn').onclick = function(){
+      window.localStorage.clear()
+      window.close()
+    }
+    // var btnLt = document.getElementById('btn-lt'),
+    //   btnLb = document.getElementById('btn-lb'),
+    //   btnRb = document.getElementById('btn-rb'),
+    //   btnRt = document.getElementById('btn-rt');
+    // var clickNum = 0;
+    // btnLt.onclick = function () {
+    //   if (clickNum === 0 || clickNum === 4 || clickNum == 8) {
+    //     clickNum ++
+    //   }
+    //   if (clickNum === 10) {
+    //     window.localStorage.clear()
+    //   }
+    // };
+    // btnLb.onclick = function () {
+    //   if (clickNum === 1 || clickNum === 5 || clickNum === 9) {
+    //     clickNum ++
+    //   }
+    //   if (clickNum === 10) {
+    //     window.localStorage.clear()
+    //   }
+    // };
+    // btnRb.onclick = function () {
+    //   if (clickNum === 2 || clickNum === 6) {
+    //     clickNum ++
+    //   }
+    //   if (clickNum === 10) {
+    //     window.localStorage.clear()
+    //   }
+    // };
+    // btnRt.onclick = function () {
+    //   if (clickNum === 3 || clickNum === 7) {
+    //     clickNum ++
+    //   }
+    //   if (clickNum === 10) {
+    //     window.localStorage.clear()
+    //   }
+    // };
+  </script>
+</body>
+
+</html>
