@@ -1,6 +1,6 @@
 <template>
   <div
-    class="gjma-btn flex-center" 
+    class="gjma-btn flex-center"
     :class="[
       type ? 'ucar-btn-' + type : '',
       size ? size : '',
@@ -14,7 +14,7 @@
   >
     <gjma-icon
       class="gjma-btn-icon"
-      v-if="icon != ''" 
+      v-if="icon != ''"
       :name="icon">
     </gjma-icon>
     <span>{{text}}</span>
@@ -28,14 +28,14 @@
  * @date 2018/07/02
  */
 export default {
-  name: "gjmaBtn",
-  data() {
-    return {};
+  name: 'gjmaBtn',
+  data () {
+    return {}
   },
   props: {
     icon: {
       type: String,
-      default: ""
+      default: ''
     },
     type: {
       type: String,
@@ -47,7 +47,7 @@ export default {
     },
     text: {
       type: String,
-      default: "登录"
+      default: '登录'
     },
     myStyle: {
       type: String,
@@ -63,9 +63,9 @@ export default {
     }
   },
   methods: {
-    handleClick() {
+    handleClick () {
       if (!this.disabled) {
-        this.$emit("click");
+        this.$emit('click')
       }
     }
   }

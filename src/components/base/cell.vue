@@ -25,7 +25,6 @@ export default {
     return {}
   },
   props: {
-    icon: '',
     title: {
       type: String,
       default: '菜单项'

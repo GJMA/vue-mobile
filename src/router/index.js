@@ -1,26 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import {index} from '@/router/module/index.js'
+import {view} from '@/router/module/view.js'
+
+let routes = [].concat(index, view)
 
 Vue.use(Router)
 
-export default new Router({
-base:'/webwxstaff/',
-  routes: [
-    {
-      path: '/',
-      component: (resolve) => require(['../page/layout.vue'], resolve),
-      children: [
-        {
-          path: '/',
-          name: 'example',
-          component: (resolve) => require(['../page/template.vue'], resolve),
-        },
-        {
-          path: '/utils',
-          name: 'utils',
-          component: (resolve) => require(['../page/utils/index.vue'], resolve)
-        }
-      ]
-    }
-  ]
+let router = new Router({
+  routes
 })
+
+export default router

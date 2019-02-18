@@ -19,6 +19,16 @@ import gjmaInput from './components/form/input.vue'
 import gjmaTextarea from './components/form/textarea.vue'
 import gjmaUpload from './components/form/upload.vue'
 
+// Function
+import gjmaMescroll from './components/function/mescroll.vue'
+
+// Keyboard
+import gjmaKeyboard from './components/keyboard/keyboard.vue'
+import gjmaProvinceKeyboard from './components/keyboard/provinceKeyboard.vue'
+
+// View
+import gjmaEmpty from './components/view/empty.vue'
+
 Vue.component('gjmaIcon', gjmaIcon)
 Vue.component('gjmaTab', gjmaTab)
 Vue.component('gjmaBtn', gjmaBtn)
@@ -32,3 +42,13 @@ Vue.component('gjmaCell', gjmaCell)
 Vue.component('gjmaInput', gjmaInput)
 Vue.component('gjmaTextarea', gjmaTextarea)
 Vue.component('gjmaUpload', gjmaUpload)
+
+// Function
+Vue.component('gjmaMescroll', gjmaMescroll)
+
+// Keyboard
+Vue.component('gjmaKeyboard', gjmaKeyboard)
+Vue.component('gjmaProvinceKeyboard', gjmaProvinceKeyboard)
+
+// View
+Vue.component('gjmaEmpty', gjmaEmpty)

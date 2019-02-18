@@ -1,26 +1,15 @@
 <template>
   <div class="container">
     <router-view></router-view>
-    <gjma-footer :list="footList"></gjma-footer>
+    <gjma-footer></gjma-footer>
   </div>
 </template>
 
 <script>
-import {formatTime} from '@/utils'
 export default {
-  name: 'auditing',
+  name: 'layout',
   data () {
     return {
-      footList: [
-        {
-          to: '/',
-          name: '首页'
-        },
-        {
-          to: '/utils',
-          name: '方法'
-        }
-      ]
     }
   },
   beforeRouteEnter (to, from, next) {

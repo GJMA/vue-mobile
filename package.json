@@ -1,7 +1,7 @@
 {
-  "name": "staffTest",
-  "version": "2.0.0",
-  "description": "ucar staff test",
+  "name": "vueMobile",
+  "version": "1.0.0",
+  "description": "mobile template",
   "author": "GJMA",
   "private": true,
   "scripts": {

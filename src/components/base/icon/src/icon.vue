@@ -11,35 +11,35 @@
 </template>
 
 <script>
-  /*
-   * 图标组件
-   * @author GJMA
-   * @date 2017/08/02
-   */
-  export default {
-    name: 'ucarIcon',
-    data() {
-      return {
-      }
+/*
+ * 图标组件
+ * @author GJMA
+ * @date 2017/08/02
+*/
+export default {
+  name: 'ucarIcon',
+  data () {
+    return {
+    }
+  },
+  props: {
+    name: {
+      type: String,
+      default: ''
     },
-    props: {
-      name:{
-        type:String,
-        default:""
-      },
-      level:{
-        type:String,
-        default:""
-      },
-      size: {
-        type: String,
-        default: ''
-      }
+    level: {
+      type: String,
+      default: ''
     },
-    methods: {
-      handleClick () {
-        this.$emit('click')
-      }
+    size: {
+      type: String,
+      default: ''
+    }
+  },
+  methods: {
+    handleClick () {
+      this.$emit('click')
     }
   }
+}
 </script>

@@ -10,9 +10,9 @@
  * 生成随机数
  */
 export const GetRandomNum = (Min, Max) => {
-  let Range = Max - Min;
-  let Rand = Math.random();
-  return(Min + Math.round(Rand * Range));
+  let Range = Max - Min
+  let Rand = Math.random()
+  return (Min + Math.round(Rand * Range))
 }
 
 /**
@@ -21,10 +21,11 @@ export const GetRandomNum = (Min, Max) => {
  * 千位符
  */
 export const toThousands = (num) => {
-  var number = (num || 0).toString(), temp = num.length % 3
+  let number = (num || 0).toString()
+  let temp = num.length % 3
   switch (temp) {
     case 1:
-      number = '00' + number;
+      number = '00' + number
       break
     case 2:
       number = '0' + number

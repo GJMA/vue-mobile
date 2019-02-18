@@ -63,15 +63,15 @@ export const debounce = function (func, sleep) {
  * 获取URL参数
  */
 export const getUrlParam = function (name) {
-  var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)')
-  var r = window.location.search.substr(1).match(reg)
+  let reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)')
+  let r = window.location.search.substr(1).match(reg)
   if (r != null) return unescape(r[2])
   return null
 }
 
-export const formatTime = (date,fmt) => {
-  var date = new Date(date)
-  var o = {
+export const formatTime = (dates, fmt) => {
+  let date = new Date(dates)
+  let o = {
     'M+': date.getMonth() + 1, // 月份
     'd+': date.getDate(), // 日
     'h+': date.getHours(), // 小时
@@ -81,8 +81,16 @@ export const formatTime = (date,fmt) => {
     'S': date.getMilliseconds() // 毫秒
   }
   if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (date.getFullYear() + '').substr(4 - RegExp.$1.length))
-  for (var k in o) {
+  for (let k in o) {
     if (new RegExp('(' + k + ')').test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length === 1) ? (o[k]) : (('00' + o[k]).substr(('' + o[k]).length)))
   }
   return fmt
+}
+
+// 禁止返回操作
+export const disabledBack = () => {
+  window.history.pushState(null, null, document.URL)
+  window.addEventListener('popstate', function () {
+    window.history.pushState(null, null, document.URL)
+  })
 }

@@ -1,39 +1,39 @@
 <template>
   <div class="gjmaFooter flex">
-    <div
+    <router-link tag="div"
       class="flex-1"
       v-for="(item, index) in list" :key="index"
-      @click="handleClick(item)"
+      :to="item.path"
     >
       {{item.name}}
-    </div>
-      <slot>
-        
-      </slot>
+    </router-link>
   </div>
 </template>
 
 <script>
-import router from '@/router'
+import {index} from '@/router/module/'
 export default {
   name: 'zfFooter',
-  props:{
-    list: {
-      type: Array,
-      default: () => {
-        return []
-      }
-    }     
+  data () {
+    return {
+      list: index[0].children
+    }
   },
   methods: {
-    handleClick (item) {
-      router.push(item.to)
-    }
+  },
+  beforeRouteEnter (to, from, next) {
+    next(vm => {
+    // 通过 `vm` 访问组件实例
+    })
   }
-  }
+}
 </script>
 
 <style lang="scss" scoped>
+.router-link-active {
+  text-decoration: none;
+  color: red;
+}
 .gjmaFooter {
   position: fixed;
   bottom: 0;
@@ -43,10 +43,10 @@ export default {
   line-height: .88rem;
   background: #fff;
   margin: 0 auto;
+   box-shadow:1px 2px 3px 1px #f2f2f2 inset;
   font-size: .24rem;
   div {
     text-align: center;
   }
 }
 </style>
-

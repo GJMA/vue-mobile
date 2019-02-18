@@ -15,7 +15,7 @@ $iconList:
 
 @each $icon in $iconList {
   .gjma-icon-#{$icon} {
-    background-image: url(../icon1/icon_#{$icon}.png);
+    background-image: url(../icon/icon_#{$icon}.png);
   }
 }
 .gjma-icon {
