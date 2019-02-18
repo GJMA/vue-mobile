@@ -60,7 +60,7 @@
 <script>
 import {getUrlParam, formatTime, disabledBack} from '@/utils/'
 import {toThousands, GetRandomNum} from '@/utils/Number'
-import {trim} from '@/utils/String'
+// import {trim} from '@/utils/String'
 export default {
   name: 'utils',
   data () {
@@ -71,7 +71,6 @@ export default {
     }
   },
   mounted () {
-    console.log(trim('dfd lkdf df fd '))
     setInterval(() => {
       this.time = formatTime(new Date(), 'yyyy-MM-dd hh:mm:ss')
     }, 1000)

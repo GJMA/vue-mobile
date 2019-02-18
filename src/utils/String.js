@@ -11,8 +11,5 @@
  */
 export const trim = (str) => {
   let result = str.replace(/(^\s+)|(\s+$)/g, '')
-  console.log(result)
-  return str.replace(/(^\s+)|(\s+$)/g, '')
+  return result
 }
-
-trim('dd ddds sf')
