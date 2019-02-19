@@ -85,7 +85,7 @@ export default {
 .gjma-input {
   width: 100%;
   height: $height;
-  border: .01rem solid #e3211d;
+  border: 1px solid #d3d3d3;
   padding: 0 .16rem;
   font-size: .3rem;
   .input-label {

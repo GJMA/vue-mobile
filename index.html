@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <META    HTTP-EQUIV="Pragma" CONTENT="no-cache">
 
-<META    HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+<head>
+  <meta charset="utf-8">
+  <script>
+    var scale = 1.0
+    var ratio = 1
+    if (window.devicePixelRatio && window.devicePixelRatio >= 2) {
+      scale = 1 / window.devicePixelRatio
+      ratio = 1 * window.devicePixelRatio
+    }
+    var text = '<meta name="viewport" content="initial-scale=' + scale + ', maximum-scale=' + scale + ',' + ' minimum-scale=' + scale + ', width=device-width,' + ' user-scalable=no" />'
+    document.write(text);
+  </script>
+  <!-- <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" /> -->
+  <script src="https://res.wx.qq.com/open/libs/weuijs/1.0.0/weui.min.js"></script>
+  <script type='text/javascript' src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+  <title>智慧U站加油员</title>
+</head>
 
-<META    HTTP-EQUIV="Expires" CONTENT="-1">
-     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
-     <script src="https://res.wx.qq.com/open/libs/weuijs/1.0.0/weui.min.js"></script>
-     <script type='text/javascript' src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
-    <title>智慧U站加油员</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+<body>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
 </html>

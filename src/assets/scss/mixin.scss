@@ -1,0 +1,3 @@
+@mixin margin ($position, $number) {
+  margin-#{$position}: $number/100 + rem;
+}

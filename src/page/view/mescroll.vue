@@ -4,7 +4,7 @@
       :pageSize="params.pageSize"
       @load="loadList"
     >
-      <div v-for="(item, index) in list" :key="index">{{item}}</div>
+      <div v-for="(item, index) in list" :key="index" style="height: 1rem;">{{item}}</div>
     </gjma-mescroll>
   </div>
 </template>

@@ -48,7 +48,6 @@
 ::-webkit-scrollbar {
     display: none;
 }
-
 /*基本样式*/
 html {
 	font-size: 100px;
@@ -57,80 +56,9 @@ html,
 body {
 	width: 100%;
 	height: 100%;
-	max-width: 750px;
 	margin: 0 auto;
 	font-size: .24rem;
 }
-
 body {
 	color: #333;
 }
-
-
-/*公用样式*/
-
-/*flex布局*/
-
-/*水平-从左到右*/
-.flex {
-	display: -webkit-flex;
-	display: flex;
-	
-	
-	-webkit-align-items: center;
-	align-items: center;
-	
-}
-
-/*水平-居中*/
-.flex-center {
-	display: -webkit-flex;
-	display: flex;
-	
-	-webkit-justify-content: center;
-	justify-content: center;
-	
-	
-	-webkit-align-items: center;
-	align-items: center;
-}
-
-/*水平-around*/
-.flex-around {
-	display: -webkit-flex;
-	display: flex;
-	
-	-webkit-justify-content: space-around;
-	justify-content: space-around;
-	
-	-webkit-align-items: center;
-	align-items: center;
-	
-}
-
-/*水平-between*/
-.flex-between {
-	display: -webkit-flex!important;
-	display: flex;
-	
-	-webkit-justify-content: space-between;
-	justify-content: space-between;
-	
-	-webkit-align-items: center;
-	align-items: center;
-	
-}
-
-
-.flex-v {
-    -webkit-box-orient: vertical;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-}
-
-
-.flex-1 {
-    -webkit-flex: 1;
-    flex: 1;
-}
-

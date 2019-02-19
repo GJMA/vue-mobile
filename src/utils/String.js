@@ -1,5 +1,5 @@
 /**
- * Number
+ * String
  * @author GJMA
  * @date 2019-02-18
  **/
@@ -7,9 +7,9 @@
 /**
  * @author GJMA
  * @date 2019-02-18
- * 生成随机数
+ * 删除空格
  */
 export const trim = (str) => {
-  let result = str.replace(/(^\s+)|(\s+$)/g, '')
+  let result = str.replace(/\s/g, '')
   return result
 }

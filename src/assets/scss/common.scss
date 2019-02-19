@@ -1,6 +1,7 @@
 @import './_var.scss';
 @import '../css/base.css';
 @import './icon.scss';
+@import './mixin.scss';
 
 // 基础
 .container {
@@ -11,22 +12,37 @@
 }
 .section {
   background: #fff;
-  border-bottom: .01rem solid #d3d3d3;
-  padding: .16rem .24rem;
+  margin: 0 .24rem .24rem;
+  border-radius: .06rem;
+  padding: 0 .24rem .16rem;
   &-title {
     line-height: .88rem;
-    margin-bottom: .16rem;
     border-bottom: .01rem dotted #e3e3e3;
     font-weight: bold;
-    font-size: .32rem;
+    font-size: 32px;
   }
   &-content {
+    p {
+      line-height: .88rem;
+      text-align: center;
+     }
     &-item {
       margin-bottom: .32rem;
+    }
+    ul {
+      padding-left: .16rem;
+      li {
+        line-height: .6rem;
+      }
     }
   }
 }
 /** 功能型 */
+.menu-list {
+  .menu-cell {
+    border-bottom: .01rem solid #d3d3d3;
+  }
+}
 // 单元格
 .menu-cell {
   height: .88rem;
@@ -96,22 +112,44 @@
 /**
   边距
 **/
-.mr-b-32 {
-  margin-bottom: .32rem;
+$marginList:
+  16,
+  24,
+  32
+;
+$posList: 't', 'r', 'b', 'l';
+
+@each $pos in $posList {
+  @each $margin in $marginList {
+    .mr {
+      &-#{$pos}-#{$margin} {
+        @if $pos == 't' {
+          @include margin('top', $margin);
+        } @else if $pos == r {
+          @include margin('right', $margin);
+        } @else if $pos == b {
+          @include margin('bottom', $margin);
+        } @else {
+          @include margin('left', $margin);
+        }
+      }
+    }
+  }
 }
-.mr {
-  &-b {
-    &-8 {
-      margin-bottom: .08rem;
-    }
-    &-16 {
-      margin-bottom: .16rem;
-    }
-    &-24 {
-      margin-bottom: .24rem;
-    }
-    &-32 {
-      margin-bottom: .32rem;
+@each $pos in $posList {
+  @each $margin in $marginList {
+    .pd {
+      &-#{$pos}-#{$margin} {
+        @if $pos == 't' {
+          @include margin('top', $margin);
+        } @else if $pos == r {
+          @include margin('right', $margin);
+        } @else if $pos == b {
+          @include margin('bottom', $margin);
+        } @else {
+          @include margin('left', $margin);
+        }
+      }
     }
   }
 }

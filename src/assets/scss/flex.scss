@@ -1,0 +1,41 @@
+// flex布局
+.flex {
+  display: -webkit-flex;
+	display: flex;
+}
+.flex-v {
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+.flex-wrap {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.flex-1 {
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.flex-center {
+  @extend .flex;
+  -webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.flex-between {
+  @extend .flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.flex-around {
+  @extend .flex;
+  -webkit-justify-content: space-around;
+	justify-content: space-around;
+	-webkit-align-items: center;
+	align-items: center;
+}
