@@ -8,6 +8,7 @@ import './assets/css/animate.css'
 import './assets/js/layout.js'
 import './component.js'
 import './filters/index.js'
+import '@/mock/mock.js'
 import store from './store/index.js'
 
 Vue.config.productionTip = false

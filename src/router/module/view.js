@@ -18,5 +18,10 @@ export const view = [
     path: '/mescroll',
     name: '下拉加载',
     component: (resolve) => require(['../../page/view/mescroll.vue'], resolve)
+  },
+  {
+    path: '/imageLazyLoad',
+    name: '图片懒加载',
+    component: (resolve) => require(['../../page/view/imageLazyLoad.vue'], resolve)
   }
 ]

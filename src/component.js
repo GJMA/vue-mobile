@@ -21,6 +21,7 @@ import gjmaUpload from './components/form/upload.vue'
 
 // Function
 import gjmaMescroll from './components/function/mescroll.vue'
+import gjmaLazyLoad from './components/function/lazyLoad.vue'
 
 // Keyboard
 import gjmaKeyboard from './components/keyboard/keyboard.vue'
@@ -45,6 +46,7 @@ Vue.component('gjmaUpload', gjmaUpload)
 
 // Function
 Vue.component('gjmaMescroll', gjmaMescroll)
+Vue.component('gjmaLazyLoad', gjmaLazyLoad)
 
 // Keyboard
 Vue.component('gjmaKeyboard', gjmaKeyboard)
