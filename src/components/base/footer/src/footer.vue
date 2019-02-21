@@ -11,12 +11,18 @@
 </template>
 
 <script>
-import {index} from '@/router/module/'
 export default {
   name: 'zfFooter',
+  props: {
+    list: {
+      type: Array,
+      default: () => {
+        return []
+      }
+    }
+  },
   data () {
     return {
-      list: index[0].children
     }
   },
   methods: {

@@ -1,19 +1,21 @@
 <template>
   <transition enter-active-class="animated fadeInRight">
-    <div class="container">
-      <h4>Compontents</h4>
-      <h4>Utils</h4>
-      <h4>View</h4>
+    <div class="height-100">
+      <router-view></router-view>
+      <gjma-footer :list="list"></gjma-footer>
     </div>
   </transition>
 </template>
 
 <script>
+import {demoFooter} from '@/router/module/demoFooter'
+console.log(demoFooter)
 export default {
   name: 'index',
   data () {
     return {
       showDialog: false,
+      list: [],
       tabList: [
         {
           id: 0,
@@ -26,6 +28,9 @@ export default {
       ]
     }
   },
+  mounted () {
+    this.list = demoFooter
+  },
   methods: {
   },
   beforeRouteEnter (to, from, next) {
@@ -37,4 +42,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.desc {
+  background: #fff;
+  line-height: .4rem;
+  padding: .24rem .32rem;
+  text-indent: 2em;
+  color: #79797b;
+  font-size: .28rem;
+}
 </style>

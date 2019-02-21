@@ -3,8 +3,9 @@ import Router from 'vue-router'
 import {index} from '@/router/module/index.js'
 import {view} from '@/router/module/view.js'
 import {utils} from '@/router/module/utils.js'
+import {component} from '@/router/module/component.js'
 
-let routes = [].concat(index, view, utils)
+let routes = [].concat(index, view, utils, component)
 
 Vue.use(Router)
 

@@ -1,7 +1,15 @@
 <template>
   <div class="container">
-    <router-view></router-view>
-    <gjma-footer></gjma-footer>
+    <gjma-cell
+        title="template"
+        to="/index"
+      >
+    </gjma-cell>
+    <gjma-cell
+        title="demo"
+        to="/demo"
+      >
+    </gjma-cell>
   </div>
 </template>
 

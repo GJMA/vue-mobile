@@ -15,7 +15,6 @@
 <script>
 import {getUrlParam, formatTime, disabledBack} from '@/utils/'
 import {toThousands, GetRandomNum} from '@/utils/Number'
-// import {trim} from '@/utils/String'
 import {utils} from '@/router/module/utils.js'
 export default {
   name: 'utils',

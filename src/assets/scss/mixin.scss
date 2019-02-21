@@ -1,3 +1,6 @@
 @mixin margin ($position, $number) {
   margin-#{$position}: $number/100 + rem;
 }
+@mixin padding ($position, $number) {
+  padding-#{$position}: $number/100 + rem;
+}

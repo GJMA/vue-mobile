@@ -28,7 +28,7 @@
  * @date 2018/07/02
  */
 export default {
-  name: 'gjmaBtn',
+  name: 'gjmaButton',
   data () {
     return {}
   },

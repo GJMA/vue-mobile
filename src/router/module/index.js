@@ -1,28 +1,18 @@
+import {demoFooter} from '@/router/module/demoFooter'
+import {footer} from '@/router/module/footer'
 export const index = [
   {
     path: '/',
-    component: (resolve) => require(['../../page/layout.vue'], resolve),
-    children: [
-      {
-        path: '/index',
-        name: '首页',
-        component: (resolve) => require(['../../page/index.vue'], resolve)
-      },
-      {
-        path: '/component',
-        name: '组件',
-        component: (resolve) => require(['../../page/component/index.vue'], resolve)
-      },
-      {
-        path: '/utils',
-        name: '方法',
-        component: (resolve) => require(['../../page/utils/index.vue'], resolve)
-      },
-      {
-        path: '/view',
-        name: '页面',
-        component: (resolve) => require(['../../page/view/index.vue'], resolve)
-      }
-    ]
+    component: (resolve) => require(['../../page/layout.vue'], resolve)
+  },
+  {
+    path: '/index',
+    component: (resolve) => require(['../../page/home/index.vue'], resolve),
+    children: footer
+  },
+  {
+    path: '/demo',
+    component: (resolve) => require(['../../page/demo/layout.vue'], resolve),
+    children: demoFooter
   }
 ]

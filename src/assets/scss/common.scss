@@ -4,11 +4,21 @@
 @import './mixin.scss';
 
 // 基础
+.height-100 {
+  height: 100%;
+}
 .container {
   position: relative;
   overflow: auto;
   height: 100%;
   background: #f2f2f2;
+}
+.title {
+  padding: .16rem 0;
+  font: {
+    weight: bold;
+    size: .32rem;
+  }
 }
 .section {
   background: #fff;
@@ -55,6 +65,11 @@
 }
 
 // 定位
+.fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+}
 .pos {
   &-center {
     position: absolute;
@@ -141,13 +156,13 @@ $posList: 't', 'r', 'b', 'l';
     .pd {
       &-#{$pos}-#{$margin} {
         @if $pos == 't' {
-          @include margin('top', $margin);
+          @include padding('top', $margin);
         } @else if $pos == r {
-          @include margin('right', $margin);
+          @include padding('right', $margin);
         } @else if $pos == b {
-          @include margin('bottom', $margin);
+          @include padding('bottom', $margin);
         } @else {
-          @include margin('left', $margin);
+          @include padding('left', $margin);
         }
       }
     }
