@@ -2,9 +2,9 @@
   <div class="flex-around tab">
     <div class="tab-item flex-1"
       v-for="(item, key) in list"
-      :class="{active: isActive === item.id}"
       :key="key"
-      @click="handleClick(item.id)"
+      :class="{active: isActive === item.path}"
+      @click="handleClick(item)"
     >
       {{item.name}}
       <span></span>
@@ -22,10 +22,14 @@ export default {
   name: 'gjmaTab',
   data () {
     return {
-      isActive: 0
+      isActive: ''
     }
   },
   props: {
+    router: {
+      type: Boolean,
+      default: false
+    },
     list: {
       type: Array,
       default: () => {
@@ -33,18 +37,24 @@ export default {
       }
     }
   },
-  methods: {
-    handleClick (id) {
-      this.isActive = id
-      this.$emit('click', id)
-    }
-  },
   mounted () {
+    this.isActive = this.$route.path
+  },
+  methods: {
+    handleClick (item) {
+      if (this.router) {
+        this.isActive = item.path
+        this.$router.push(item.path)
+      }
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+.router-link-active {
+  color: red;
+}
 // tab切换
 .tab {
   height: .88rem;

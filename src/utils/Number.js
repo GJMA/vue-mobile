@@ -33,3 +33,13 @@ export const toThousands = (num) => {
   }
   return number.match(/\d{3}/g).join(',').replace(/^0+/, '')
 }
+
+/**
+ * @author GJMA
+ * @date 2019-02-14
+ * 补0
+ */
+
+export const prefixInteger = (num, length) => {
+  return (Array(length).join('0') + num).slice(-length)
+}

@@ -10,6 +10,18 @@ export const footer = [
     component: (resolve) => require(['../../page/component/index.vue'], resolve)
   },
   {
+    path: '/router',
+    name: '路由',
+    component: (resolve) => require(['../../page/router/index.vue'], resolve),
+    children: [
+      {
+        path: 'example',
+        name: '路由',
+        component: (resolve) => require(['../../page/router/example.vue'], resolve)
+      }
+    ]
+  },
+  {
     path: '/utils',
     name: '方法',
     component: (resolve) => require(['../../page/utils/index.vue'], resolve)

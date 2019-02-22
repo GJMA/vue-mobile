@@ -9,7 +9,6 @@
 
 <script>
 import {demoFooter} from '@/router/module/demoFooter'
-console.log(demoFooter)
 export default {
   name: 'index',
   data () {

@@ -12,6 +12,7 @@ import gjmaSwitch from './components/base/switch.vue'
 import gjmaSelect from './components/base/select.vue'
 import gjmaDialog from './components/base/dialog.vue'
 import gjmaCell from './components/base/cell.vue'
+import gjmaVideo from './components/base/video.vue'
 
 // FORM
 import gjmaInput from './components/form/input.vue'
@@ -37,6 +38,7 @@ Vue.component('gjmaSwitch', gjmaSwitch)
 Vue.component('gjmaSelect', gjmaSelect)
 Vue.component('gjmaDialog', gjmaDialog)
 Vue.component('gjmaCell', gjmaCell)
+Vue.component('gjmaVideo', gjmaVideo)
 
 // FORM
 Vue.component('gjmaInput', gjmaInput)

@@ -1,8 +1,30 @@
 export const demoFooter = [
   {
-    path: '/zhIndex',
+    path: '/zhIndex/:id',
     name: '知乎首页',
-    component: (resolve) => require(['../../page/demo/home/index.vue'], resolve)
+    component: (resolve) => require(['../../page/demo/home/index.vue'], resolve),
+    children: [
+      {
+        path: 'follow',
+        name: '关注',
+        component: (resolve) => require(['../../page/demo/home/follow.vue'], resolve)
+      },
+      {
+        path: 'recommend',
+        name: '推荐',
+        component: (resolve) => require(['../../page/demo/home/recommend.vue'], resolve)
+      },
+      {
+        path: 'hot',
+        name: '热榜',
+        component: (resolve) => require(['../../page/demo/home/hot.vue'], resolve)
+      },
+      {
+        path: 'video',
+        name: '视频',
+        component: (resolve) => require(['../../page/demo/home/video.vue'], resolve)
+      }
+    ]
   },
   // {
   //   path: '/component',

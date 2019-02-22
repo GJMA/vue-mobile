@@ -48,6 +48,17 @@
   }
 }
 /** 功能型 */
+.row-ellipsis {
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.rows-ellipsis {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
 .menu-list {
   .menu-cell {
     border-bottom: .01rem solid #d3d3d3;
@@ -81,7 +92,6 @@
     width: 70%;
     background: #fff;
     border-radius: .1rem;
-    padding: .34rem;
   }
 }
 // 遮罩

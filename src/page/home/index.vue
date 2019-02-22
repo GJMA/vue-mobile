@@ -1,12 +1,7 @@
 <template>
   <transition enter-active-class="animated fadeInRight">
     <div class="container">
-      <div class="banner mr-b-32">
-        <img src="../../assets/images/succ.jpg" alt="">
-      </div>
-      <div class="desc mr-b-32">
-        针对移动端项目开发的VUE模板，基于vue-cli，封装移动端常见组件
-      </div>
+      <router-view></router-view>
       <gjma-footer :list="list"></gjma-footer>
     </div>
   </transition>

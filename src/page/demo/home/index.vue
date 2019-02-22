@@ -9,42 +9,17 @@
           >
           </gjma-input>
           <gjma-button
+            text="提问"
             icon="logo"
             myStyle="width: 2rem; background: #f2f2f2; color: #333"
           >
           </gjma-button>
         </div>
-        <gjma-tab :list="tabList"></gjma-tab>
+        <gjma-tab :list="tabList" :router="true"></gjma-tab>
       </div>
       <!-- list -->
       <div class="flex-1 list pd-t-24" style="overflow: auto; width: 100%; background: #f2f2f2;">
-        <gjma-mescroll
-          :pageSize="params.pageSize"
-          @load="loadList"
-        >
-          <div 
-            class="list-item mr-b-24"
-            v-for="(item, index) in 50"
-            :key="index"
-          >
-            <div class="list-item-info flex">
-              <img src="../../../assets/logo.png" alt="">
-              <span>vczh赞同了回答·6分钟前</span>
-            </div>
-            <div class="title">
-              如何看待纪晓岚与和珅的经典对白？
-            </div>
-            <div class="list-item-content pd-b-24">
-              d的地方德里克考虑到附近的路口附近迪斯科浪费角度上考虑附近的是否角度上考虑
-              打开了附近的是了迪斯科浪费角度上考虑分解为妇女加快了速度反抗军的理科生的
-              的看法登上了飞机迪斯科浪费加快了王府井了打算离开房间打算离开房间饿哦我i附
-            </div>
-            <div class="list-item-set flex-between">
-              <span>848 赞同·101 评论</span>
-              <span>更多</span>
-            </div>
-          </div>
-        </gjma-mescroll>
+        <router-view></router-view>
       </div>
     </div>
   </transition>
@@ -53,7 +28,6 @@
 <script>
 import {demoFooter} from '@/router/module/demoFooter'
 import {GetRandomNum} from '@/utils/Number.js'
-console.log(demoFooter)
 export default {
   name: 'index',
   data () {
@@ -66,19 +40,23 @@ export default {
       tabList: [
         {
           id: 0,
-          name: '关注'
+          name: '关注',
+          path: '/foo'
         },
         {
           id: 1,
-          name: '推荐'
+          name: '推荐',
+          path: 'recommend'
         },
         {
           id: 2,
-          name: '热榜'
+          name: '热榜',
+          path: 'hot'
         },
         {
           id: 3,
-          name: '视频'
+          name: '视频',
+          path: 'video'
         }
       ]
     }
